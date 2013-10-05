@@ -8,3 +8,6 @@ realname: whitequark's logger bot
 nickname: logger_test
 channels:
   - "#irclogger-test"
+
+auth_username: username
+auth_password: password

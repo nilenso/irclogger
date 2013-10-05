@@ -26,6 +26,10 @@ module IrcLogger
       end
     end
 
+    use Rack::Auth::Basic, "Restricted Area" do |username, password|
+      username == Config['auth_username'] and password == Config['auth_password']
+    end
+
     get '/' do
       haml :index
     end
